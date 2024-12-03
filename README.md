@@ -33,7 +33,7 @@ git submodule add git@github.com:Free-Apps-for-All/file_manager_git_module.git g
 
 or adjust as you wish
 ```bash
-git submodule add git@github.com:Free-Apps-for-All/file_manager_git_module.git <path/to/clone>
+git submodule add git@github.com:Free-Apps-for-All/file_manager_git_module.git <path/to/save>
 ```
 
 ---
