@@ -21,10 +21,10 @@ git config core.sparseCheckout true
 ```
 
 ```bash
-echo "!/.gitignore" >> .git/info/sparse-checkout
-echo "!/README.md" >> .git/info/sparse-checkout
+echo "\!/README.md" >> .git/info/sparse-checkout
+echo "\!/.gitignore" >> .git/info/sparse-checkout
 ```
-
+or 
 ### 3. Include the submodule
 
 ```bash
