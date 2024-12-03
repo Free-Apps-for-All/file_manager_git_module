@@ -18,6 +18,16 @@ Create a `.gitmodules` file and include this gitmodule. Example:
 
 ### Initial Install:
 
+if not *
+```bash
+git init
+git submodule init
+```
+
+```bash
+git submodule add git@github.com:Free-Apps-for-All/file_manager_git_module.git
+```
+
 ```bash
 git submodule update --init --recursive
 ```
