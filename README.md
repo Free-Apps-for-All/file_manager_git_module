@@ -1,43 +1,39 @@
-# Gitmodule Utility to Standardize File Operations with Ease
+# Gitmodule Utility to standard manage file operations with ease.
 
----
+--- 
 
 ## Usage
 
-Create a `.gitmodules` file and include this gitmodule. Example:
 
-```yaml
-[submodule "file_manager"]
-    path = ./gitmodules
-    url = git@github.com:Free-Apps-for-All/file_manager_git_module.git
-```
+###  1. First thing first
 
----
 
-## Install
-
-### Initial Install:
-
-if not *
 ```bash
 git init
-git submodule init
+```
+
+### 2. Turn on Git's sparse-checkout
+
+Need this to exclude `README.md` and  `.gitignore` files:
+
+```bash
+git config core.sparseCheckout true
 ```
 
 ```bash
-git submodule add git@github.com:Free-Apps-for-All/file_manager_git_module.git
+echo "!/.gitignore" >> .git/info/sparse-checkout
+echo "!/README.md" >> .git/info/sparse-checkout
 ```
 
+### 3. Include the submodule
+
 ```bash
-git submodule update --init --recursive
+git submodule add git@github.com:Free-Apps-for-All/file_manager_git_module.git gitmodules/file_manager
 ```
 
-### Further Update (if updates are available):
-
+or adjust as you wish
 ```bash
-git submodule update --recursive
+git submodule add git@github.com:Free-Apps-for-All/file_manager_git_module.git <path/to/clone>
 ```
 
 ---
-
-This version should be correct. Just ensure that you are naming the file `.gitmodules` (plural) in your project.
